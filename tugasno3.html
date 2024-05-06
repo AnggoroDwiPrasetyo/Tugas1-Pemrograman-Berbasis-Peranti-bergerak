@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+        <title>Tugas 1 No. 3</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Nilai 1 - 50:</h1>
+            <ul>
+                <li v-for="number in numbers" :key="number">{{ number }}</li>
+            </ul>
+        </div>
+
+        <script>
+            new vue({
+                el: '#app',
+                data: {
+                    numbers: []
+                },
+                mounted() {
+                    for (let i = 1; i <= 50; i++) {
+                        this.numbers.push(i)
+                    }
+                }
+            }); 
+        </script>
+    </body>
+</html>
+
